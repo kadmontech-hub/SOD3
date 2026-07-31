@@ -1,3 +1,11 @@
+# SØD Visual MVP v3.0.1 — Hotfix de despliegue
+
+- Corrige un error de sintaxis en `public/js/ui.js` que impedía montar la aplicación y producía pantalla negra.
+- El validador ahora revisa recursivamente todos los módulos JavaScript y MJS.
+- Se actualiza el Service Worker a `sod-shell-v3.0.1`.
+- Navegaciones, scripts, estilos y workers usan estrategia network-first para evitar código obsoleto.
+- No cambia contenido, diseño ni assets visuales.
+
 # SØD Ecosystem Visual MVP V3.0.0
 
 ## Core release

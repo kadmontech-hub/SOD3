@@ -10,7 +10,7 @@ const [views, styles, content, store, ui, pkg] = await Promise.all([
   readFile(new URL('../package.json', import.meta.url), 'utf8'),
 ]);
 
-assert.match(pkg, /"version": "3\.0\.0"/);
+assert.match(pkg, /"version": "3\.0\.[01]"/);
 assert.match(views, /function transformationView/);
 assert.match(views, /if\(route==='\/experiencia'\)return transformationView\(\)/);
 assert.match(views, /La Semilla ya existía/);

@@ -1,3 +1,7 @@
+# Hotfix v3.0.1
+
+Pantalla negra corregida. La causa era un error de sintaxis en `public/js/ui.js`. El validador ahora recorre todos los módulos JavaScript.
+
 # SØD Ecosystem — Project Status
 
 ## Release

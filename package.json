@@ -1,0 +1,19 @@
+{
+  "name": "sod-ecosystem",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "description": "SØD Ecosystem Visual MVP V3 — functional final-product mockup for GitHub and Vercel",
+  "scripts": {
+    "dev": "node --watch server.mjs",
+    "start": "node server.mjs",
+    "build": "node scripts/build.mjs",
+    "vercel-build": "npm run build",
+    "check": "node --check server.mjs && node --check public/js/app.js && node --check public/js/views.js && node --check public/js/hub-scene.js && node --check public/js/api.js && node --check api/health.mjs && node --check api/dialogue.mjs",
+    "test": "npm run build && node tests/domain.mjs && node tests/visual.mjs && node tests/v3.mjs && node tests/smoke.mjs && node tests/vercel.mjs",
+    "validate": "npm run check && npm test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

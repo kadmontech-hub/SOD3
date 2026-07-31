@@ -1,0 +1,1082 @@
+{
+  "prompt_version": "SOD-WEBAPP-ONE-SHOT-1.0",
+  "project": {
+    "name": "SØD Ecosystem Web App",
+    "product_type": "Web app inmersiva, PWA, plataforma de conciencia, universo interactivo, biblioteca y sistema coleccionable",
+    "primary_language": "es-AR",
+    "secondary_language_ready": true,
+    "target_markets": [
+      "Argentina",
+      "LATAM",
+      "mercado hispanohablante global"
+    ],
+    "core_statement": "Todo es información. La conciencia crea la realidad.",
+    "primary_experience": "Hub central inmersivo en primera persona, navegable mediante mouse, touch, giroscopio y opcionalmente WebXR",
+    "product_goal": "Convertir SØD en una experiencia digital viva donde el usuario explora universos, dialoga con SØD, integra comprensiones, registra su recorrido, descubre Semillas, accede a Elementos 33 y construye una identidad progresiva dentro del ecosistema."
+  },
+  "agent_role": {
+    "instruction": "Actuá como arquitecto de software principal, lead product designer, director UX/UI, technical artist 3D, game designer, frontend engineer senior, backend engineer senior, especialista en WebGL, optimización mobile, accesibilidad, seguridad, producto digital y sistemas interactivos.",
+    "seniority": "Nivel principal, staff o distinguished engineer con criterio de dirección de videojuego AAA y producto SaaS premium.",
+    "behavior": [
+      "No entregues una landing estática disfrazada de aplicación.",
+      "No entregues solamente wireframes, mockups o pseudocódigo.",
+      "Construí una aplicación funcional, ejecutable, mantenible y desplegable.",
+      "Tomá decisiones técnicas justificadas cuando falten datos.",
+      "Usá placeholders claramente identificados cuando falten contenidos o assets.",
+      "No bloquees el desarrollo por integraciones externas aún no disponibles.",
+      "Implementá adaptadores y feature flags para sustituir mocks posteriormente.",
+      "No uses componentes genéricos sin personalización visual.",
+      "No conviertas toda la interfaz en una escena 3D ilegible.",
+      "Priorizá experiencia, rendimiento, claridad, accesibilidad y escalabilidad."
+    ]
+  },
+  "source_of_truth": {
+    "priority_order": [
+      "Documentos oficiales SØD entregados por el fundador",
+      "Whitepaper Visual ELEMENTOS 33",
+      "Documentos de códigos SØD por elemento",
+      "Referencias visuales del Hub Central",
+      "Identidad visual y logos oficiales",
+      "Este brief técnico",
+      "Supuestos documentados por el equipo"
+    ],
+    "canonical_rules": {
+      "elements": [
+        "Tierra",
+        "Agua",
+        "Viento",
+        "Fuego",
+        "Éter"
+      ],
+      "pieces_per_element": 33,
+      "total_element_pieces": 165,
+      "levels": [
+        {
+          "key": "velo",
+          "label": "Velo",
+          "quantity_per_element": 12,
+          "meaning": "Lo literal, visible, simple y pragmático"
+        },
+        {
+          "key": "remez",
+          "label": "Remez o Eco",
+          "quantity_per_element": 12,
+          "meaning": "Insinuación, metáfora y patrones ocultos"
+        },
+        {
+          "key": "derash",
+          "label": "Derash o Patrón",
+          "quantity_per_element": 6,
+          "meaning": "Relato, historia, moraleja y narrativa cultural"
+        },
+        {
+          "key": "sod",
+          "label": "SØD o Puerta",
+          "quantity_per_element": 2,
+          "meaning": "Revelación mística y arquetípica"
+        },
+        {
+          "key": "sod2",
+          "label": "SØD² u Origen",
+          "quantity_per_element": 1,
+          "meaning": "Núcleo primordial y revelación absoluta"
+        }
+      ],
+      "core_principles": [
+        "Todo es información",
+        "La realidad es fractal",
+        "Ø es la puerta y el origen",
+        "Cada Semilla contiene comprensión, interpretación y aplicación",
+        "La experiencia debe producir integración, no consumo pasivo"
+      ]
+    },
+    "content_rule": "Todo contenido entregado en los documentos debe importarse a datos estructurados. No debe hardcodearse dentro de componentes visuales."
+  },
+  "mandatory_first_action": {
+    "task": "Realizar una auditoría silenciosa de todos los archivos proporcionados antes de programar.",
+    "outputs": [
+      "Inventario de assets",
+      "Mapa de contenidos",
+      "Entidades detectadas",
+      "Campos faltantes",
+      "Riesgos técnicos",
+      "Supuestos adoptados",
+      "Plan de implementación por fases"
+    ],
+    "blocking_rule": "No detenerse a pedir confirmación salvo que falte una credencial imprescindible para una operación irreversible. Para todo lo demás, utilizar mocks, placeholders o adaptadores."
+  },
+  "experience_architecture": {
+    "experience_layers": [
+      {
+        "layer": "DOM application shell",
+        "purpose": "Navegación, accesibilidad, formularios, contenido, SEO, autenticación y paneles legibles"
+      },
+      {
+        "layer": "Immersive scene",
+        "purpose": "Entorno 360, objetos 3D, partículas, cámara, hotspots y transiciones"
+      },
+      {
+        "layer": "Spatial UI",
+        "purpose": "Paneles anclados al espacio, tooltips, estados y selección de universos"
+      },
+      {
+        "layer": "Audio",
+        "purpose": "Ambiente, feedback, voz, sonidos reactivos y silencio controlado"
+      },
+      {
+        "layer": "Data and progression",
+        "purpose": "Usuario, journeys, progreso, semillas, colección, inventario y mensajes"
+      }
+    ],
+    "progressive_modes": [
+      {
+        "mode": "2D",
+        "condition": "Dispositivo limitado, reduced motion, accesibilidad o fallo WebGL",
+        "experience": "Dashboard visual completo con imagen panorámica estática, tarjetas y navegación tradicional"
+      },
+      {
+        "mode": "360",
+        "condition": "Mobile y desktop compatible",
+        "experience": "Panorama equirectangular navegable con hotspots, orb 3D y UI espacial"
+      },
+      {
+        "mode": "3D",
+        "condition": "Hardware suficiente",
+        "experience": "Hub renderizado en tiempo real con objetos, iluminación, partículas y transiciones"
+      },
+      {
+        "mode": "XR",
+        "condition": "Navegador y dispositivo WebXR compatible y activación voluntaria",
+        "experience": "Sesión inmersiva con controladores, gaze o ray interaction"
+      }
+    ]
+  },
+  "primary_user_flow": [
+    {
+      "step": 1,
+      "route": "/",
+      "name": "Portal de entrada",
+      "objective": "Comunicar qué es SØD y permitir entrar, iniciar sesión o explorar como invitado"
+    },
+    {
+      "step": 2,
+      "route": "/onboarding",
+      "name": "Calibración inicial",
+      "objective": "Presentar el concepto, seleccionar intención, ajustar audio, movimiento y calidad gráfica"
+    },
+    {
+      "step": 3,
+      "route": "/hub",
+      "name": "Hub Central",
+      "objective": "Ser el corazón cotidiano del producto"
+    },
+    {
+      "step": 4,
+      "route": "/universos/[slug]",
+      "name": "Universos",
+      "objective": "Abrir experiencias temáticas, prácticas y recorridos"
+    },
+    {
+      "step": 5,
+      "route": "/biblioteca",
+      "name": "Biblioteca",
+      "objective": "Mostrar descubrimientos, comprensiones, códigos, semillas y contenido desbloqueado"
+    },
+    {
+      "step": 6,
+      "route": "/elementos",
+      "name": "Elementos 33",
+      "objective": "Explorar las cinco colecciones, sus niveles y las 165 piezas"
+    },
+    {
+      "step": 7,
+      "route": "/perfil",
+      "name": "Identidad y progreso",
+      "objective": "Mostrar nivel, journeys, colección, logros, preferencias y privacidad"
+    }
+  ],
+  "hub_central": {
+    "design_goal": "El usuario debe sentir que entra en un lugar vivo, íntimo y monumental, no en un menú convencional.",
+    "camera": {
+      "mode": "first-person stationary exploration with optional node teleport",
+      "default_height_meters": 1.65,
+      "default_fov_degrees": 70,
+      "horizontal_rotation": 360,
+      "vertical_rotation_limit_degrees": 70,
+      "desktop_controls": [
+        "drag para mirar",
+        "wheel limitado para zoom o FOV",
+        "WASD solo si existe movimiento 3D real",
+        "Enter o Space para seleccionar",
+        "Escape para cerrar panel",
+        "teclas numéricas como shortcuts opcionales"
+      ],
+      "mobile_controls": [
+        "drag para mirar",
+        "tap para seleccionar",
+        "pinch limitado",
+        "giroscopio opt-in",
+        "botón para recentrar cámara"
+      ],
+      "xr_controls": [
+        "ray pointer",
+        "gaze dwell opcional",
+        "trigger para seleccionar",
+        "teleport limitado a nodos seguros"
+      ]
+    },
+    "spatial_layout": {
+      "center": {
+        "name": "Núcleo SØD",
+        "object": "Orbe geométrico vivo suspendido sobre pedestal circular",
+        "functions": [
+          "Iniciar diálogo con SØD",
+          "Mostrar estado de conciencia",
+          "Reproducir mensaje diario",
+          "Abrir journey actual",
+          "Activar transición hacia universos"
+        ],
+        "states": [
+          "reposo",
+          "hover",
+          "escucha",
+          "procesamiento",
+          "respuesta",
+          "portal",
+          "error",
+          "offline"
+        ]
+      },
+      "left_zone": {
+        "name": "Universos",
+        "items": [
+          "Hablar con SØD",
+          "Hábitos",
+          "Claridad",
+          "Enfoque",
+          "Conocimiento",
+          "Comunidad",
+          "Propósito"
+        ],
+        "interaction": "Selección por hotspot, panel espacial o menú DOM accesible sincronizado"
+      },
+      "right_zone": {
+        "name": "Estado y mensajes",
+        "modules": [
+          "Mensaje de SØD",
+          "Viaje actual",
+          "Clave del día",
+          "Estado del sistema",
+          "Notificaciones"
+        ]
+      },
+      "foreground_zone": {
+        "name": "Mesa o altar personal",
+        "interactive_objects": [
+          {
+            "object": "Libro SØD",
+            "destination": "/biblioteca"
+          },
+          {
+            "object": "Bitácora",
+            "destination": "/bitacora"
+          },
+          {
+            "object": "Cristal o artefacto",
+            "destination": "/coleccion"
+          },
+          {
+            "object": "Mapa o diagramas",
+            "destination": "/journey"
+          }
+        ]
+      },
+      "perimeter": {
+        "name": "Portales",
+        "behavior": "Cada universo puede tener un arco, puerta, hotspot o nodo visual propio. Al seleccionar se activa iluminación, audio y una transición antes de navegar."
+      }
+    },
+    "interaction_feedback": [
+      "Cambio sutil de luz",
+      "Escala máxima de 1.03 en UI espacial",
+      "Sonido corto no invasivo",
+      "Partículas convergentes",
+      "Vibración háptica en dispositivos compatibles",
+      "Texto de acción visible",
+      "Cursor o retícula accesible",
+      "Estado de carga y posibilidad de cancelar"
+    ],
+    "motion_rules": [
+      "Nada debe moverse permanentemente con velocidad alta.",
+      "El orb debe respirar, no girar como spinner.",
+      "Las partículas nunca deben impedir lectura.",
+      "Las transiciones principales deben durar entre 600 y 1600 ms.",
+      "Respetar prefers-reduced-motion.",
+      "Evitar camera shake salvo activación narrativa puntual.",
+      "No usar autoplay de voz sin consentimiento."
+    ]
+  },
+  "universes": {
+    "data_driven": true,
+    "required_fields": [
+      "id",
+      "slug",
+      "title",
+      "shortDescription",
+      "longDescription",
+      "icon",
+      "color",
+      "accentColor",
+      "sceneId",
+      "panoramaUrl",
+      "thumbnailUrl",
+      "audioUrl",
+      "levelRequired",
+      "status",
+      "hotspots",
+      "journeys",
+      "practices",
+      "messages",
+      "seo"
+    ],
+    "initial_universes": [
+      {
+        "slug": "hablar-con-sod",
+        "purpose": "Conversación reflexiva y contextual con SØD"
+      },
+      {
+        "slug": "habitos",
+        "purpose": "Prácticas, seguimiento y repetición consciente"
+      },
+      {
+        "slug": "claridad",
+        "purpose": "Preguntas, orden mental y reinterpretación"
+      },
+      {
+        "slug": "enfoque",
+        "purpose": "Priorización, intención y ejecución"
+      },
+      {
+        "slug": "conocimiento",
+        "purpose": "Biblioteca, códigos, piezas y aprendizajes"
+      },
+      {
+        "slug": "comunidad",
+        "purpose": "Interacción social, eventos, aportes y pertenencia"
+      },
+      {
+        "slug": "proposito",
+        "purpose": "Dirección personal, decisiones y construcción"
+      }
+    ],
+    "rule": "Cada universo debe poder cambiar de panorama 360 a escena 3D sin alterar sus rutas, modelo de contenido o lógica de navegación."
+  },
+  "feature_modules": {
+    "phase_1_mvp": [
+      "Landing de entrada",
+      "Modo invitado",
+      "Autenticación",
+      "Onboarding",
+      "Hub Central 360 navegable",
+      "Orb 3D interactivo",
+      "Siete universos navegables",
+      "Panel de mensaje diario",
+      "Journey inicial de 7 o 14 días",
+      "Bitácora",
+      "Biblioteca",
+      "Catálogo Elementos 33 con datos mock o importados",
+      "Perfil",
+      "Configuración gráfica, audio, movimiento y privacidad",
+      "Panel administrativo básico",
+      "PWA instalable",
+      "Responsive desktop, tablet y mobile"
+    ],
+    "phase_2": [
+      "Escenas 3D completas",
+      "Diálogo con modelo de inteligencia artificial",
+      "Voz de SØD",
+      "Audio espacial",
+      "Inventario de artefactos",
+      "Sistema de desbloqueos",
+      "Marketplace",
+      "Wallet",
+      "Lectura on-chain",
+      "Eventos comunitarios",
+      "Notificaciones push"
+    ],
+    "phase_3": [
+      "WebXR",
+      "Multiplayer social",
+      "Avatares",
+      "Gobernanza",
+      "Economía interna",
+      "Creación de espacios por usuarios",
+      "Aplicaciones nativas"
+    ]
+  },
+  "elementos_33": {
+    "collection_structure": {
+      "elements": 5,
+      "pieces_per_element": 33,
+      "total": 165,
+      "hierarchy": "12 Velo + 12 Remez + 6 Derash + 2 SØD + 1 SØD²"
+    },
+    "required_views": [
+      "Vista general de los cinco elementos",
+      "Vista individual por elemento",
+      "Filtro por nivel",
+      "Filtro por símbolo",
+      "Filtro por motivo geométrico",
+      "Buscador",
+      "Detalle de pieza",
+      "Modo galería",
+      "Modo objeto 3D",
+      "Modo interpretación",
+      "Piezas relacionadas",
+      "Estado de propiedad o disponibilidad"
+    ],
+    "piece_data_model": [
+      "id",
+      "number",
+      "element",
+      "level",
+      "title",
+      "phrase",
+      "interpretation",
+      "practicalApplication",
+      "concept",
+      "shortDescription",
+      "palette",
+      "symbol",
+      "geometricMotif",
+      "keywords",
+      "image",
+      "transparentAsset",
+      "model3d",
+      "animation",
+      "audio",
+      "edition",
+      "rarity",
+      "supply",
+      "owner",
+      "contractAddress",
+      "tokenId",
+      "chain",
+      "status"
+    ],
+    "blockchain_policy": {
+      "initial_mode": "Mock data and read-only UI",
+      "integration": "Implementar provider desacoplado mediante interfaces",
+      "wallet": "Detrás de feature flag hasta recibir contratos, ABI, chain ID y reglas de negocio",
+      "security_rule": "Nunca solicitar seed phrase ni almacenar claves privadas"
+    }
+  },
+  "dialogue_with_sod": {
+    "initial_mode": "Scripted dialogue and mocked streaming responses",
+    "future_mode": "LLM provider adapter",
+    "ui_requirements": [
+      "Texto streaming",
+      "Botón detener",
+      "Historial por sesión",
+      "Modo voz opt-in",
+      "Estados escuchando, pensando y respondiendo",
+      "Citas internas hacia biblioteca",
+      "Acción para guardar una respuesta como Semilla",
+      "Reporte de respuesta",
+      "Disclaimer cuando corresponda"
+    ],
+    "safety": [
+      "No presentarse como terapeuta, médico ni autoridad absoluta.",
+      "No realizar diagnósticos.",
+      "Distinguir reflexión de hecho verificable.",
+      "Permitir borrar historial.",
+      "Minimizar almacenamiento de información personal."
+    ]
+  },
+  "journey_system": {
+    "entities": [
+      "Journey",
+      "JourneyDay",
+      "Practice",
+      "Reflection",
+      "Completion",
+      "Unlock",
+      "Streak"
+    ],
+    "initial_journey": {
+      "duration_days": 14,
+      "daily_structure": [
+        "Mensaje",
+        "Pregunta",
+        "Práctica",
+        "Registro",
+        "Integración",
+        "Cierre"
+      ]
+    },
+    "gamification_policy": [
+      "No usar manipulación, presión artificial o dark patterns.",
+      "No castigar al usuario por perder una racha.",
+      "Mostrar progreso como orientación, no como culpa.",
+      "Premiar integración y reflexión, no solo cantidad de clics."
+    ]
+  },
+  "design_system": {
+    "identity": "Tecnomístico, profundo, premium, íntimo, cinematográfico y legible",
+    "visual_balance": "70% oscuridad y profundidad, 20% estructura funcional, 10% energía o acentos",
+    "color_tokens": {
+      "background_void": "#030711",
+      "background_surface": "#07111E",
+      "background_elevated": "#0C1928",
+      "cyan_primary": "#00D9FF",
+      "blue_energy": "#247CFF",
+      "violet_consciousness": "#8B5CFF",
+      "green_life": "#5BE39D",
+      "gold_origin": "#D9A95B",
+      "text_primary": "#F3F7FB",
+      "text_secondary": "#A6B4C5",
+      "border_subtle": "rgba(118, 210, 255, 0.18)",
+      "danger": "#FF5F6D",
+      "success": "#47D7A0"
+    },
+    "typography": {
+      "display": "Fuente oficial SØD proporcionada o alternativa geométrica premium",
+      "body": "Sans serif altamente legible",
+      "data": "Monoespaciada para frecuencia, estados, códigos y metadata",
+      "rules": [
+        "No usar más de tres familias.",
+        "No usar tracking excesivo en párrafos.",
+        "Texto mínimo mobile 16 px.",
+        "Contraste WCAG AA.",
+        "Nunca renderizar textos críticos como textura 3D."
+      ]
+    },
+    "components": [
+      "SpatialPanel",
+      "UniverseSelector",
+      "OrbCore",
+      "Hotspot",
+      "JourneyCard",
+      "DailyKey",
+      "SodMessage",
+      "SystemStatus",
+      "ArtifactViewer",
+      "ElementBadge",
+      "LevelBadge",
+      "SeedCard",
+      "SeedDetail",
+      "AudioControl",
+      "QualitySelector",
+      "SceneLoader",
+      "FallbackDashboard",
+      "AccessibleSceneMirror"
+    ],
+    "ui_rule": "Crear componentes propios. Puede usarse una librería headless para comportamiento, pero el resultado no debe verse como una plantilla genérica."
+  },
+  "technical_stack": {
+    "version_policy": "Usar las últimas versiones estables y compatibles disponibles al iniciar el proyecto. Registrar versiones exactas en lockfile.",
+    "repository": "Monorepo con pnpm workspaces o Turborepo",
+    "frontend": [
+      "Next.js App Router",
+      "React",
+      "TypeScript strict",
+      "React Three Fiber",
+      "Three.js",
+      "@react-three/drei",
+      "Tailwind CSS o CSS Modules con design tokens",
+      "Radix Primitives como capa headless opcional",
+      "Zustand para estado efímero e interactivo",
+      "TanStack Query para estado de servidor",
+      "React Hook Form",
+      "Zod"
+    ],
+    "backend": [
+      "Route Handlers o servicio API desacoplado",
+      "PostgreSQL",
+      "Drizzle ORM o Prisma",
+      "Autenticación con sesiones seguras",
+      "Storage compatible con S3",
+      "Redis opcional para rate limit, caché y colas"
+    ],
+    "three_d_pipeline": [
+      "GLTF o GLB",
+      "Draco o Meshopt",
+      "KTX2 o Basis para texturas",
+      "HDRI optimizado",
+      "Instancing",
+      "LOD",
+      "Frustum culling",
+      "Lazy loading",
+      "Asset preloading selectivo"
+    ],
+    "audio": [
+      "Web Audio API o Howler",
+      "Audio ambiental en loop",
+      "Crossfade entre escenas",
+      "Mute persistente",
+      "Volumen independiente para voz, ambiente y efectos"
+    ],
+    "testing": [
+      "Vitest",
+      "React Testing Library",
+      "Playwright",
+      "Visual regression",
+      "Lighthouse CI",
+      "Axe accessibility tests"
+    ],
+    "deployment": [
+      "Vercel para frontend y API inicial",
+      "Base PostgreSQL administrada",
+      "Storage S3 o R2",
+      "CDN para panoramas, audio, GLB y texturas",
+      "Preview deployment por pull request"
+    ]
+  },
+  "repository_structure": {
+    "folders": [
+      "apps/web",
+      "packages/ui",
+      "packages/three",
+      "packages/domain",
+      "packages/content",
+      "packages/config",
+      "packages/testing",
+      "public/assets/panoramas",
+      "public/assets/models",
+      "public/assets/textures",
+      "public/assets/audio",
+      "public/assets/brand",
+      "docs/architecture",
+      "docs/content",
+      "docs/decisions"
+    ],
+    "required_documentation": [
+      "README.md",
+      "SETUP.md",
+      "ARCHITECTURE.md",
+      "CONTENT_MODEL.md",
+      "ASSET_PIPELINE.md",
+      "DEPLOYMENT.md",
+      "SECURITY.md",
+      "ACCESSIBILITY.md",
+      "PERFORMANCE.md",
+      "ASSUMPTIONS.md"
+    ]
+  },
+  "data_models": {
+    "entities": [
+      "User",
+      "Profile",
+      "Preference",
+      "Universe",
+      "Scene",
+      "Hotspot",
+      "Journey",
+      "JourneyDay",
+      "Practice",
+      "Reflection",
+      "Message",
+      "DailyKey",
+      "Seed",
+      "ElementCollection",
+      "ElementPiece",
+      "Artifact",
+      "InventoryItem",
+      "Ownership",
+      "Unlock",
+      "Achievement",
+      "MediaAsset",
+      "ContentVersion",
+      "Event",
+      "AuditLog"
+    ],
+    "rules": [
+      "Usar UUID internos.",
+      "Separar contenido editorial de estado de usuario.",
+      "Versionar contenido.",
+      "No almacenar coordenadas de hotspots dentro de componentes.",
+      "Guardar hotspots como datos configurables.",
+      "Definir enums compartidos en el paquete domain.",
+      "Preparar migraciones reproducibles.",
+      "Incluir seed de base de datos para desarrollo."
+    ]
+  },
+  "scene_configuration_example": {
+    "sceneId": "hub-central-v1",
+    "mode": "panorama-plus-3d",
+    "panorama": {
+      "desktop": "/assets/panoramas/hub-central-8k.webp",
+      "mobile": "/assets/panoramas/hub-central-4k.webp",
+      "fallback": "/assets/panoramas/hub-central-fallback.webp"
+    },
+    "camera": {
+      "fov": 70,
+      "initialYaw": 0,
+      "initialPitch": 0
+    },
+    "qualityTiers": {
+      "low": {
+        "pixelRatio": 1,
+        "particles": 150,
+        "shadows": false,
+        "textureMax": 1024
+      },
+      "medium": {
+        "pixelRatio": 1.25,
+        "particles": 500,
+        "shadows": true,
+        "textureMax": 2048
+      },
+      "high": {
+        "pixelRatio": 1.75,
+        "particles": 1200,
+        "shadows": true,
+        "textureMax": 4096
+      }
+    },
+    "hotspots": [
+      {
+        "id": "universe-claridad",
+        "yaw": -38,
+        "pitch": 4,
+        "type": "portal",
+        "label": "Claridad",
+        "action": {
+          "type": "navigate",
+          "target": "/universos/claridad"
+        }
+      },
+      {
+        "id": "orb-dialogue",
+        "yaw": 0,
+        "pitch": 2,
+        "type": "core",
+        "label": "Hablar con SØD",
+        "action": {
+          "type": "open-dialogue"
+        }
+      },
+      {
+        "id": "library-book",
+        "yaw": 16,
+        "pitch": -24,
+        "type": "artifact",
+        "label": "Biblioteca",
+        "action": {
+          "type": "navigate",
+          "target": "/biblioteca"
+        }
+      }
+    ]
+  },
+  "performance_budgets": {
+    "landing": {
+      "lcp_target_seconds": 2.5,
+      "cls_target": 0.1,
+      "interaction_target_ms": 200
+    },
+    "hub": {
+      "desktop_target_fps": 60,
+      "mid_mobile_minimum_fps": 30,
+      "initial_critical_download_mb": 4,
+      "initial_scene_download_mb": 12,
+      "panorama_desktop_max_mb": 8,
+      "panorama_mobile_max_mb": 4,
+      "single_glb_preferred_max_mb": 6,
+      "texture_default": "2K",
+      "texture_4k_policy": "Solo para objetos hero y dispositivos capaces"
+    },
+    "loading_strategy": [
+      "Cargar shell y contenido crítico primero.",
+      "Cargar la escena tras interacción o durante onboarding.",
+      "Mostrar progreso real por bytes o etapas.",
+      "Precargar únicamente el próximo destino probable.",
+      "Abortar descargas al abandonar una escena.",
+      "Liberar geometrías, materiales, texturas y audio al desmontar."
+    ]
+  },
+  "adaptive_quality": {
+    "signals": [
+      "deviceMemory",
+      "hardwareConcurrency",
+      "pixelRatio",
+      "screenSize",
+      "measuredFrameRate",
+      "connectionType",
+      "saveData",
+      "reducedMotion"
+    ],
+    "behavior": [
+      "Comenzar en calidad conservadora.",
+      "Medir rendimiento durante los primeros segundos.",
+      "Subir o bajar calidad progresivamente.",
+      "Persistir preferencia manual.",
+      "Nunca bloquear el acceso por falta de WebGL."
+    ]
+  },
+  "accessibility": {
+    "requirements": [
+      "Toda función 3D debe tener equivalente DOM.",
+      "Navegación completa por teclado.",
+      "Focus visible.",
+      "ARIA labels correctos.",
+      "Textos críticos fuera del canvas.",
+      "Modo alto contraste.",
+      "Reduced motion.",
+      "Subtítulos para voz y audio narrativo.",
+      "No depender exclusivamente del color.",
+      "Controles para desactivar giroscopio, partículas, bloom y movimiento.",
+      "Screen-reader route descriptions.",
+      "Modal de ayuda de controles."
+    ]
+  },
+  "security": {
+    "requirements": [
+      "TypeScript strict y validación Zod en límites de confianza.",
+      "No exponer secretos al cliente.",
+      "CSP restrictiva compatible con assets autorizados.",
+      "CSRF protection cuando corresponda.",
+      "Rate limiting.",
+      "Sanitización de contenido.",
+      "Protección contra XSS.",
+      "Sesiones httpOnly, secure y sameSite.",
+      "Row-level access o validación de propiedad.",
+      "Auditoría de cambios administrativos.",
+      "Backups.",
+      "Borrado de cuenta y exportación de datos.",
+      "No almacenar claves privadas ni frases semilla."
+    ]
+  },
+  "analytics": {
+    "privacy_first": true,
+    "events": [
+      "app_entered",
+      "onboarding_completed",
+      "hub_loaded",
+      "quality_tier_selected",
+      "hotspot_viewed",
+      "universe_selected",
+      "journey_started",
+      "practice_completed",
+      "reflection_saved",
+      "seed_viewed",
+      "element_piece_viewed",
+      "audio_enabled",
+      "xr_entered",
+      "scene_error"
+    ],
+    "rule": "No enviar texto privado de conversaciones o bitácora a analytics."
+  },
+  "admin_cms": {
+    "routes": [
+      "/admin",
+      "/admin/universos",
+      "/admin/scenes",
+      "/admin/hotspots",
+      "/admin/journeys",
+      "/admin/messages",
+      "/admin/seeds",
+      "/admin/elementos",
+      "/admin/media"
+    ],
+    "features": [
+      "CRUD protegido por roles",
+      "Vista previa",
+      "Draft y publicación",
+      "Ordenamiento",
+      "Carga de assets",
+      "Validación",
+      "Historial de versiones",
+      "Importación JSON y CSV",
+      "Exportación",
+      "Activación mediante feature flags"
+    ]
+  },
+  "required_routes": [
+    "/",
+    "/entrar",
+    "/registro",
+    "/onboarding",
+    "/hub",
+    "/universos/[slug]",
+    "/journey",
+    "/journey/[slug]",
+    "/bitacora",
+    "/biblioteca",
+    "/semillas",
+    "/semillas/[id]",
+    "/elementos",
+    "/elementos/[element]",
+    "/elementos/[element]/[number]",
+    "/coleccion",
+    "/marketplace",
+    "/perfil",
+    "/configuracion",
+    "/privacidad",
+    "/admin"
+  ],
+  "implementation_phases": [
+    {
+      "phase": 0,
+      "name": "Auditoría y arquitectura",
+      "deliverables": [
+        "Inventario de materiales",
+        "Mapa de dominio",
+        "Arquitectura",
+        "ADRs",
+        "Backlog",
+        "Repo inicial"
+      ]
+    },
+    {
+      "phase": 1,
+      "name": "Design system y shell",
+      "deliverables": [
+        "Tokens",
+        "Componentes",
+        "Navegación",
+        "Autenticación",
+        "Responsive",
+        "Fallback 2D"
+      ]
+    },
+    {
+      "phase": 2,
+      "name": "Hub inmersivo MVP",
+      "deliverables": [
+        "Panorama 360",
+        "Orb 3D",
+        "Hotspots",
+        "Paneles espaciales",
+        "Audio",
+        "Calidad adaptativa"
+      ]
+    },
+    {
+      "phase": 3,
+      "name": "Contenido y progresión",
+      "deliverables": [
+        "Universos",
+        "Journey",
+        "Bitácora",
+        "Biblioteca",
+        "Mensajes",
+        "Perfil"
+      ]
+    },
+    {
+      "phase": 4,
+      "name": "Elementos 33",
+      "deliverables": [
+        "Importación de contenido",
+        "Catálogo",
+        "Filtros",
+        "Detalle",
+        "Galería",
+        "Viewer 3D"
+      ]
+    },
+    {
+      "phase": 5,
+      "name": "QA y producción",
+      "deliverables": [
+        "Tests",
+        "Performance",
+        "Accesibilidad",
+        "Seguridad",
+        "Analytics",
+        "Deploy",
+        "Documentación"
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "El repositorio instala y ejecuta mediante instrucciones de README.",
+    "No existen errores TypeScript.",
+    "No existen errores críticos de consola.",
+    "El usuario puede entrar como invitado.",
+    "El onboarding puede completarse.",
+    "El Hub Central carga con indicador de progreso real.",
+    "El usuario puede mirar alrededor mediante mouse y touch.",
+    "El giroscopio requiere consentimiento.",
+    "El orb central responde a hover, tap y selección.",
+    "Los siete universos son seleccionables.",
+    "Al menos tres hotspots producen acciones funcionales.",
+    "Existe fallback 2D funcional.",
+    "El contenido no está acoplado a componentes.",
+    "Elementos 33 puede poblarse desde JSON o base de datos.",
+    "Los filtros por elemento y nivel funcionan.",
+    "La bitácora permite crear, editar y borrar registros.",
+    "El usuario puede controlar audio, movimiento y calidad.",
+    "La navegación es usable por teclado.",
+    "La interfaz es responsive.",
+    "La app es instalable como PWA.",
+    "Existen pruebas end-to-end de los flujos críticos.",
+    "Existen estados de loading, empty, offline, error y retry.",
+    "El deploy de producción no contiene secretos.",
+    "La documentación permite reemplazar panoramas, modelos y audios sin modificar la arquitectura."
+  ],
+  "final_delivery": {
+    "must_include": [
+      "Código completo",
+      "Repositorio organizado",
+      "Base de datos y migraciones",
+      "Seed data",
+      "Archivo .env.example",
+      "Tests",
+      "Deploy funcional",
+      "Credenciales y roles documentados",
+      "Manual para modificar contenido",
+      "Manual de assets 3D",
+      "Listado de pendientes reales",
+      "Listado de placeholders",
+      "Video corto recorriendo la app",
+      "Capturas desktop y mobile"
+    ],
+    "response_format": [
+      "Resumen ejecutivo",
+      "Decisiones de arquitectura",
+      "Árbol del repositorio",
+      "Pasos de instalación",
+      "Variables de entorno",
+      "Implementación",
+      "Tests ejecutados",
+      "Métricas obtenidas",
+      "URL del deploy",
+      "Pendientes y riesgos"
+    ]
+  },
+  "prohibitions": [
+    "No entregar solamente HTML estático.",
+    "No recrear las referencias como una única imagen plana con botones falsos.",
+    "No incorporar todos los textos dentro del canvas.",
+    "No usar scroll horizontal accidental.",
+    "No usar audio automático.",
+    "No forzar wallet en el onboarding.",
+    "No usar dark patterns.",
+    "No inventar contratos blockchain.",
+    "No hardcodear las 165 piezas manualmente en componentes.",
+    "No cargar todos los assets 3D al inicio.",
+    "No sacrificar mobile por una demo desktop.",
+    "No ocultar fallos con try-catch vacíos.",
+    "No entregar funciones críticas como TODO.",
+    "No afirmar que algo está completo si permanece simulado."
+  ],
+  "execution_order": [
+    "Inspeccioná materiales.",
+    "Documentá supuestos.",
+    "Creá la arquitectura.",
+    "Inicializá el monorepo.",
+    "Implementá shell y design system.",
+    "Implementá fallback 2D.",
+    "Implementá Hub 360.",
+    "Añadí orb y hotspots 3D.",
+    "Implementá contenido y progresión.",
+    "Importá Elementos 33.",
+    "Construí CMS.",
+    "Agregá tests.",
+    "Optimizá.",
+    "Desplegá.",
+    "Entregá documentación y reporte final."
+  ]
+}
